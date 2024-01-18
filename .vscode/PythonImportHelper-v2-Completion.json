@@ -614,6 +614,14 @@
         "documentation": {}
     },
     {
+        "label": "Count",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
         "label": "BeautifulSoup",
         "importPath": "bs4",
         "description": "bs4",
@@ -721,7 +729,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'django.contrib.sites',\n    'allauth',\n    'allauth.account',",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'django.contrib.sites',\n    'django_htmx',\n    'allauth',",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -739,7 +747,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    \"allauth.account.middleware.AccountMiddleware\",\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    \"allauth.account.middleware.AccountMiddleware\",\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n    \"django_htmx.middleware.HtmxMiddleware\",",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1207,7 +1215,7 @@
         "kind": 2,
         "importPath": "a_posts.views",
         "description": "a_posts.views",
-        "peekOfCode": "def post_page_view(request, pk):\n    post = get_object_or_404(Post, id=pk)\n    commentform = CommentCreateForm()\n    replyform = ReplyCreateForm()\n    context = {\n        'post': post,\n        'commentform': commentform,\n        'replyform': replyform\n    }\n    return render(request, 'a_posts/post_page.html', context)",
+        "peekOfCode": "def post_page_view(request, pk):\n    post = get_object_or_404(Post, id=pk)\n    commentform = CommentCreateForm()\n    replyform = ReplyCreateForm()\n    if request.htmx:\n        if 'top' in request.GET:\n            # comments = post.comments.filter(likes__isnull=False).distinct()\n            comments = post.comments.annotate(num_likes=Count('likes')).filter(num_likes__gt=0).order_by('-num_likes')\n        else:\n            comments = post.comments.all()",
         "detail": "a_posts.views",
         "documentation": {}
     },
