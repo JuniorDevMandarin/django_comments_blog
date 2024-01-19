@@ -7,7 +7,7 @@ from .forms import *
 from bs4 import BeautifulSoup
 import requests
 from django.contrib import messages 
-
+from django.core.paginator import Paginator
 
 def home_view(request, tag=None):
     title = 'Test Blog Comments'
@@ -17,21 +17,27 @@ def home_view(request, tag=None):
     else:
         posts = Post.objects.all()
     
+    paginator = Paginator(posts, 3)
+    page = int(request.GET.get('page', 1))
+    try:
+        posts = paginator.page(page)
+    except:
+        return HttpResponse('')
     # for i in posts:
     #     if i.image :
     #         print("_____________", i.image)
     #     else: 
     #         print('ssssssssssss', i.photo_field)
 
-    categories = Tag.objects.all()
     
     context = {
         'posts' : posts,
-        'categories': categories,
         'title': title,
         'tag': tag,
+        'page':page
     }
-    
+    if request.htmx:
+        return render(request, 'snippets/loop_home_posts.html', context)
     return render(request, 'a_posts/home.html', context)
 
 
@@ -98,11 +104,10 @@ def post_edit_view(request, pk):
     return render(request, 'a_posts/post_edit.html', context)
 
 def post_page_view(request, pk):
-
     post = get_object_or_404(Post, id=pk)
-    
     commentform = CommentCreateForm()
     replyform = ReplyCreateForm()
+    categories = Tag.objects.all()
     
     if request.htmx:
         if 'top' in request.GET:
@@ -116,7 +121,8 @@ def post_page_view(request, pk):
     context = {
         'post': post,
         'commentform': commentform,
-        'replyform': replyform
+        'replyform': replyform,
+        'categories': categories
     }
     
     return render(request, 'a_posts/post_page.html', context)

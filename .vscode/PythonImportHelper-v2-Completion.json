@@ -50,6 +50,14 @@
         "documentation": {}
     },
     {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "messages",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -90,6 +98,14 @@
         "documentation": {}
     },
     {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "reverse",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -111,6 +127,22 @@
         "description": "a_users.views",
         "isExtraImport": true,
         "detail": "a_users.views",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "a_inbox.views",
+        "description": "a_inbox.views",
+        "isExtraImport": true,
+        "detail": "a_inbox.views",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
         "documentation": {}
     },
     {
@@ -178,21 +210,21 @@
         "documentation": {}
     },
     {
-        "label": "a_posts.models",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "a_posts.models",
-        "description": "a_posts.models",
-        "detail": "a_posts.models",
-        "documentation": {}
-    },
-    {
         "label": "django.db.models.deletion",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "django.db.models.deletion",
         "description": "django.db.models.deletion",
         "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "django.utils.timezone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "detail": "django.utils.timezone",
         "documentation": {}
     },
     {
@@ -221,14 +253,6 @@
         "documentation": {}
     },
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -301,7 +325,7 @@
         "documentation": {}
     },
     {
-        "label": "models",
+        "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -341,28 +365,35 @@
         "documentation": {}
     },
     {
-        "label": "ckeditor.fields",
-        "kind": 6,
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
         "isExtraImport": true,
-        "importPath": "ckeditor.fields",
-        "description": "ckeditor.fields",
-        "detail": "ckeditor.fields",
+        "detail": "django.db",
         "documentation": {}
     },
     {
-        "label": "RichTextField",
-        "importPath": "ckeditor.fields",
-        "description": "ckeditor.fields",
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
         "isExtraImport": true,
-        "detail": "ckeditor.fields",
+        "detail": "django.db",
         "documentation": {}
     },
     {
-        "label": "RichTextField",
-        "importPath": "ckeditor.fields",
-        "description": "ckeditor.fields",
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
         "isExtraImport": true,
-        "detail": "ckeditor.fields",
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
         "documentation": {}
     },
     {
@@ -379,6 +410,22 @@
         "description": "django.apps",
         "isExtraImport": true,
         "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "ModelForm",
+        "importPath": "django.forms",
+        "description": "django.forms",
+        "isExtraImport": true,
+        "detail": "django.forms",
         "documentation": {}
     },
     {
@@ -422,6 +469,320 @@
         "documentation": {}
     },
     {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "timesince",
+        "importPath": "django.utils.timesince",
+        "description": "django.utils.timesince",
+        "isExtraImport": true,
+        "detail": "django.utils.timesince",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "Http404",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "Http404",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "Q",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Count",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Count",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Count",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Profile",
+        "importPath": "a_users.models",
+        "description": "a_users.models",
+        "isExtraImport": true,
+        "detail": "a_users.models",
+        "documentation": {}
+    },
+    {
+        "label": "a_posts.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "a_posts.models",
+        "description": "a_posts.models",
+        "detail": "a_posts.models",
+        "documentation": {}
+    },
+    {
+        "label": "ckeditor.fields",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ckeditor.fields",
+        "description": "ckeditor.fields",
+        "detail": "ckeditor.fields",
+        "documentation": {}
+    },
+    {
+        "label": "RichTextField",
+        "importPath": "ckeditor.fields",
+        "description": "ckeditor.fields",
+        "isExtraImport": true,
+        "detail": "ckeditor.fields",
+        "documentation": {}
+    },
+    {
+        "label": "RichTextField",
+        "importPath": "ckeditor.fields",
+        "description": "ckeditor.fields",
+        "isExtraImport": true,
+        "detail": "ckeditor.fields",
+        "documentation": {}
+    },
+    {
+        "label": "Library",
+        "importPath": "django.template",
+        "description": "django.template",
+        "isExtraImport": true,
+        "detail": "django.template",
+        "documentation": {}
+    },
+    {
         "label": "CaptchaField",
         "importPath": "captcha.fields",
         "description": "captcha.fields",
@@ -435,38 +796,6 @@
         "description": "xml.etree",
         "isExtraImport": true,
         "detail": "xml.etree",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
         "documentation": {}
     },
     {
@@ -510,118 +839,6 @@
         "documentation": {}
     },
     {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "HttpResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "Http404",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "get_object_or_404",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "get_object_or_404",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "get_object_or_404",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "login_required",
-        "importPath": "django.contrib.auth.decorators",
-        "description": "django.contrib.auth.decorators",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.decorators",
-        "documentation": {}
-    },
-    {
-        "label": "login_required",
-        "importPath": "django.contrib.auth.decorators",
-        "description": "django.contrib.auth.decorators",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.decorators",
-        "documentation": {}
-    },
-    {
-        "label": "Count",
-        "importPath": "django.db.models",
-        "description": "django.db.models",
-        "isExtraImport": true,
-        "detail": "django.db.models",
-        "documentation": {}
-    },
-    {
         "label": "BeautifulSoup",
         "importPath": "bs4",
         "description": "bs4",
@@ -636,6 +853,14 @@
         "importPath": "requests",
         "description": "requests",
         "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "Paginator",
+        "importPath": "django.core.paginator",
+        "description": "django.core.paginator",
+        "isExtraImport": true,
+        "detail": "django.core.paginator",
         "documentation": {}
     },
     {
@@ -668,6 +893,22 @@
         "description": "django.contrib.auth",
         "isExtraImport": true,
         "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "ReplyCreateForm",
+        "importPath": "a_posts.forms",
+        "description": "a_posts.forms",
+        "isExtraImport": true,
+        "detail": "a_posts.forms",
+        "documentation": {}
+    },
+    {
+        "label": "InboxNewMessageForm",
+        "importPath": "a_inbox.forms",
+        "description": "a_inbox.forms",
+        "isExtraImport": true,
+        "detail": "a_inbox.forms",
         "documentation": {}
     },
     {
@@ -900,7 +1141,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post']",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -909,7 +1150,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']\ndjango_heroku.settings(locals())",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -918,7 +1159,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']\ndjango_heroku.settings(locals())",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -927,7 +1168,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']\ndjango_heroku.settings(locals())",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -936,7 +1177,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "LOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "LOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']\ndjango_heroku.settings(locals())",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -945,7 +1186,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']\ndjango_heroku.settings(locals())",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -954,7 +1195,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "ACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "ACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']\ndjango_heroku.settings(locals())",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -963,7 +1204,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "ACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "ACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']\ndjango_heroku.settings(locals())",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -983,6 +1224,96 @@
         "description": "a_core.wsgi",
         "peekOfCode": "application = get_wsgi_application()",
         "detail": "a_core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "a_inbox.migrations.0001_initial",
+        "description": "a_inbox.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Conversation',\n            fields=[\n                ('id', models.CharField(default=uuid.uuid4, editable=False, max_length=100, primary_key=True, serialize=False, unique=True)),",
+        "detail": "a_inbox.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "AInboxConfig",
+        "kind": 6,
+        "importPath": "a_inbox.apps",
+        "description": "a_inbox.apps",
+        "peekOfCode": "class AInboxConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'a_inbox'",
+        "detail": "a_inbox.apps",
+        "documentation": {}
+    },
+    {
+        "label": "InboxNewMessageForm",
+        "kind": 6,
+        "importPath": "a_inbox.forms",
+        "description": "a_inbox.forms",
+        "peekOfCode": "class InboxNewMessageForm(ModelForm):\n    class Meta:\n        model = InboxMessage\n        fields = ['body']\n        labels = {\n            'body': '',\n        }\n        widgets = {\n            'body': forms.Textarea(attrs={'rows': 4, 'placeholder': 'Add message ...'})\n        }",
+        "detail": "a_inbox.forms",
+        "documentation": {}
+    },
+    {
+        "label": "InboxMessage",
+        "kind": 6,
+        "importPath": "a_inbox.models",
+        "description": "a_inbox.models",
+        "peekOfCode": "class InboxMessage(models.Model):\n    sender = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sent_messages')\n    conversation = models.ForeignKey('Conversation', on_delete=models.CASCADE, related_name='messages')\n    body = models.TextField()\n    created = models.DateTimeField(auto_now_add=True)\n    class Meta:\n        ordering = ['-created']\n    def __str__(self):\n        time_since = timesince(self.created, timezone.now())\n        return f'[{self.sender.username} : {time_since} ago]'",
+        "detail": "a_inbox.models",
+        "documentation": {}
+    },
+    {
+        "label": "Conversation",
+        "kind": 6,
+        "importPath": "a_inbox.models",
+        "description": "a_inbox.models",
+        "peekOfCode": "class Conversation(models.Model):\n    id = models.CharField(max_length=100, default=uuid.uuid4, unique=True, primary_key=True, editable=False)\n    participants = models.ManyToManyField(User, related_name='conversations')\n    lastmessage_created = models.DateTimeField(default=timezone.now)\n    is_seen = models.BooleanField(default=False)\n    class Meta:\n        ordering = ['-lastmessage_created']\n    def __str__(self):\n        user_names = \", \".join(user.username for user in self.participants.all())\n        return f'[{user_names}]'",
+        "detail": "a_inbox.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "a_inbox.urls",
+        "description": "a_inbox.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', inbox_view, name='inbox'),\n    path('c/<conversation_id>/', inbox_view, name='inbox'),\n    path('search_users/', search_users, name='inbox-searchusers'),\n    path('new_message/<recipient_id>', new_message, name='inbox-newmessage'),\n    path('new_reply/<conversation_id>/', new_reply, name='inbox-newreply')\n]",
+        "detail": "a_inbox.urls",
+        "documentation": {}
+    },
+    {
+        "label": "inbox_view",
+        "kind": 2,
+        "importPath": "a_inbox.views",
+        "description": "a_inbox.views",
+        "peekOfCode": "def inbox_view(request, conversation_id=None):\n    my_conversations = Conversation.objects.filter(participants=request.user)\n    if conversation_id:\n        conversation = get_object_or_404(my_conversations, id=conversation_id)\n    else:\n        conversation = None\n    context = {\n        'conversation': conversation,\n        'my_conversations' : my_conversations,\n    }",
+        "detail": "a_inbox.views",
+        "documentation": {}
+    },
+    {
+        "label": "search_users",
+        "kind": 2,
+        "importPath": "a_inbox.views",
+        "description": "a_inbox.views",
+        "peekOfCode": "def search_users(request):\n    letters = request.GET.get('search_user')\n    if request.htmx:\n        if len(letters) > 0:\n            profiles = Profile.objects.filter(realname__icontains=letters).exclude(realname=request.user.profile.realname)\n            users_id = profiles.values_list('user', flat=True)\n            users = User.objects.filter(\n                Q(username__icontains=letters) | Q(id__in=users_id)\n            ).exclude(username=request.user.username)\n            return render(request, 'a_inbox/list_searchuser.html', {'users':users})",
+        "detail": "a_inbox.views",
+        "documentation": {}
+    },
+    {
+        "label": "new_message",
+        "kind": 2,
+        "importPath": "a_inbox.views",
+        "description": "a_inbox.views",
+        "peekOfCode": "def new_message(request, recipient_id):\n    recipient = get_object_or_404( User, id=recipient_id )\n    new_message_form = InboxNewMessageForm()\n    if request.method == 'POST':\n        form = InboxNewMessageForm(request.POST)\n        if form.is_valid():\n            message = form.save(commit=False)\n            message.sender = request.user\n            my_conversations  = request.user.conversations.all()\n            for c in my_conversations :",
+        "detail": "a_inbox.views",
+        "documentation": {}
+    },
+    {
+        "label": "new_reply",
+        "kind": 2,
+        "importPath": "a_inbox.views",
+        "description": "a_inbox.views",
+        "peekOfCode": "def new_reply(request, conversation_id):\n    new_message_form = InboxNewMessageForm()\n    my_conversations = request.user.conversations.all()\n    conversation = get_object_or_404(my_conversations, id=conversation_id)\n    if request.method == 'POST':\n        form = InboxNewMessageForm(request.POST)\n        if form.is_valid():\n            message = form.save(commit=False)\n            message.sender = request.user\n            message.conversation = conversation",
+        "detail": "a_inbox.views",
         "documentation": {}
     },
     {
@@ -1037,6 +1368,24 @@
         "description": "a_posts.migrations.0006_reply_level",
         "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('a_posts', '0005_reply_parent_reply_alter_reply_parent_comment'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='reply',\n            name='level',\n            field=models.IntegerField(default=1),\n        ),",
         "detail": "a_posts.migrations.0006_reply_level",
+        "documentation": {}
+    },
+    {
+        "label": "sidebar_view",
+        "kind": 2,
+        "importPath": "a_posts.templatetags.sidebar",
+        "description": "a_posts.templatetags.sidebar",
+        "peekOfCode": "def sidebar_view(tag=None, user=None):\n    categories = Tag.objects.all()\n    top_posts = Post.objects.annotate(num_likes=Count('likes')).filter(num_likes__gt=0).order_by('-num_likes')\n    top_comments = Comment.objects.annotate(num_likes=Count('likes')).filter(num_likes__gt=0).order_by('-num_likes')\n    context = {\n        'categories': categories,\n        'tag': tag,\n        'top_posts': top_posts,\n        'top_comments': top_comments,\n        'user': user",
+        "detail": "a_posts.templatetags.sidebar",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 5,
+        "importPath": "a_posts.templatetags.sidebar",
+        "description": "a_posts.templatetags.sidebar",
+        "peekOfCode": "register = Library()\n@register.inclusion_tag('includes/sidebar.html')\ndef sidebar_view(tag=None, user=None):\n    categories = Tag.objects.all()\n    top_posts = Post.objects.annotate(num_likes=Count('likes')).filter(num_likes__gt=0).order_by('-num_likes')\n    top_comments = Comment.objects.annotate(num_likes=Count('likes')).filter(num_likes__gt=0).order_by('-num_likes')\n    context = {\n        'categories': categories,\n        'tag': tag,\n        'top_posts': top_posts,",
+        "detail": "a_posts.templatetags.sidebar",
         "documentation": {}
     },
     {
@@ -1179,7 +1528,7 @@
         "kind": 2,
         "importPath": "a_posts.views",
         "description": "a_posts.views",
-        "peekOfCode": "def home_view(request, tag=None):\n    title = 'Test Blog Comments'\n    if tag:\n        posts = Post.objects.filter(tags__slug=tag)\n        tag = get_object_or_404(Tag, slug=tag)\n    else:\n        posts = Post.objects.all()\n    # for i in posts:\n    #     if i.image :\n    #         print(\"_____________\", i.image)",
+        "peekOfCode": "def home_view(request, tag=None):\n    title = 'Test Blog Comments'\n    if tag:\n        posts = Post.objects.filter(tags__slug=tag)\n        tag = get_object_or_404(Tag, slug=tag)\n    else:\n        posts = Post.objects.all()\n    paginator = Paginator(posts, 3)\n    page = int(request.GET.get('page', 1))\n    try:",
         "detail": "a_posts.views",
         "documentation": {}
     },
@@ -1215,7 +1564,7 @@
         "kind": 2,
         "importPath": "a_posts.views",
         "description": "a_posts.views",
-        "peekOfCode": "def post_page_view(request, pk):\n    post = get_object_or_404(Post, id=pk)\n    commentform = CommentCreateForm()\n    replyform = ReplyCreateForm()\n    if request.htmx:\n        if 'top' in request.GET:\n            # comments = post.comments.filter(likes__isnull=False).distinct()\n            comments = post.comments.annotate(num_likes=Count('likes')).filter(num_likes__gt=0).order_by('-num_likes')\n        else:\n            comments = post.comments.all()",
+        "peekOfCode": "def post_page_view(request, pk):\n    post = get_object_or_404(Post, id=pk)\n    commentform = CommentCreateForm()\n    replyform = ReplyCreateForm()\n    categories = Tag.objects.all()\n    if request.htmx:\n        if 'top' in request.GET:\n            # comments = post.comments.filter(likes__isnull=False).distinct()\n            comments = post.comments.annotate(num_likes=Count('likes')).filter(num_likes__gt=0).order_by('-num_likes')\n        else:",
         "detail": "a_posts.views",
         "documentation": {}
     },
@@ -1359,7 +1708,7 @@
         "kind": 2,
         "importPath": "a_users.views",
         "description": "a_users.views",
-        "peekOfCode": "def profile_view(request, username=None):\n    if username:\n        profile = get_object_or_404(User, username=username).profile\n    else:\n        try:\n            profile = request.user.profile\n        except:\n            raise Http404()\n    return render(request, 'a_users/profile.html', {\n        'profile': profile",
+        "peekOfCode": "def profile_view(request, username=None):\n    if username:\n        profile = get_object_or_404(User, username=username).profile\n    else:\n        try:\n            profile = request.user.profile\n        except:\n            raise Http404()\n    posts = profile.user.posts.all()\n    if request.htmx:",
         "detail": "a_users.views",
         "documentation": {}
     },

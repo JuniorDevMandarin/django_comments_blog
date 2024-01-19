@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from a_posts.views import *
 from a_users.views import *
+from a_inbox.views import *
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -21,6 +22,7 @@ urlpatterns = [
     path('comment/like/<pk>/', like_comment, name='like-comment'),
     path('reply/like/<pk>/', like_reply, name='like-reply'),
     path('profile/', profile_view, name='profile'),
+    path('inbox/', include('a_inbox.urls')),
     path('<username>/', profile_view, name='userprofile'),
     path('profile/edit', profile_edit_view, name='profile-edit'),
     path('profile/delete', profile_delete_view, name='profile-delete'),

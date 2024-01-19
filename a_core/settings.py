@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'a_users',
     'ckeditor',
     'ckeditor_uploader',
+    'a_inbox',
 ]
 
 SITE_ID = 1
@@ -163,5 +164,5 @@ LOGIN_REDIRECT_URL = '/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ACCOUNT_EMAIL_REQUIRED = True
 
-ACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post']
+ACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']
 django_heroku.settings(locals())
