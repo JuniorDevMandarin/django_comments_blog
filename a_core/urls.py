@@ -5,10 +5,11 @@ from a_users.views import *
 from a_inbox.views import *
 from django.conf import settings
 from django.conf.urls.static import static
-
+from django.urls import path, include
 
 
 urlpatterns = [
+    path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path('moder/', admin.site.urls),
     path('captcha/', include('captcha.urls')),
     path('accounts/', include('allauth.urls')),

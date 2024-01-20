@@ -25,6 +25,14 @@
         "documentation": {}
     },
     {
+        "label": "Env",
+        "importPath": "environ",
+        "description": "environ",
+        "isExtraImport": true,
+        "detail": "environ",
+        "documentation": {}
+    },
+    {
         "label": "django_heroku",
         "kind": 6,
         "isExtraImport": true,
@@ -79,6 +87,22 @@
         "description": "django.contrib",
         "isExtraImport": true,
         "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
         "documentation": {}
     },
     {
@@ -194,6 +218,22 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
         "label": "static",
         "importPath": "django.conf.urls.static",
         "description": "django.conf.urls.static",
@@ -234,6 +274,15 @@
         "importPath": "uuid",
         "description": "uuid",
         "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "django.db",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db",
+        "description": "django.db",
+        "detail": "django.db",
         "documentation": {}
     },
     {
@@ -538,6 +587,22 @@
         "description": "django.utils.timesince",
         "isExtraImport": true,
         "detail": "django.utils.timesince",
+        "documentation": {}
+    },
+    {
+        "label": "Fernet",
+        "importPath": "cryptography.fernet",
+        "description": "cryptography.fernet",
+        "isExtraImport": true,
+        "detail": "cryptography.fernet",
+        "documentation": {}
+    },
+    {
+        "label": "Fernet",
+        "importPath": "cryptography.fernet",
+        "description": "cryptography.fernet",
+        "isExtraImport": true,
+        "detail": "cryptography.fernet",
         "documentation": {}
     },
     {
@@ -930,11 +995,29 @@
         "documentation": {}
     },
     {
+        "label": "env",
+        "kind": 5,
+        "importPath": "a_core.settings",
+        "description": "a_core.settings",
+        "peekOfCode": "env = Env()\nEnv.read_env()\nENVIRONMENT = env('ENVIRONMENT', default='production')\nimport django_heroku\n# Build paths inside the project like this: BASE_DIR / 'subdir'.\nBASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = env('SECRET_KEY')",
+        "detail": "a_core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ENVIRONMENT",
+        "kind": 5,
+        "importPath": "a_core.settings",
+        "description": "a_core.settings",
+        "peekOfCode": "ENVIRONMENT = env('ENVIRONMENT', default='production')\nimport django_heroku\n# Build paths inside the project like this: BASE_DIR / 'subdir'.\nBASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = env('SECRET_KEY')\nENCRYPT_KEY = env('ENCRYPT_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!",
+        "detail": "a_core.settings",
+        "documentation": {}
+    },
+    {
         "label": "BASE_DIR",
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-3t4-@gu%d^_yj-+5bmvxn*cyoor=4o43#p3sjrlpgkeancn*q^'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = env('SECRET_KEY')\nENCRYPT_KEY = env('ENCRYPT_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nif ENVIRONMENT == 'development':    \n    DEBUG = True\nelse:",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -943,16 +1026,16 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-3t4-@gu%d^_yj-+5bmvxn*cyoor=4o43#p3sjrlpgkeancn*q^'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = env('SECRET_KEY')\nENCRYPT_KEY = env('ENCRYPT_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nif ENVIRONMENT == 'development':    \n    DEBUG = True\nelse:\n    DEBUG = False\nALLOWED_HOSTS = ['*']\nINTERNAL_IPS = [\n    '127.0.0.1',",
         "detail": "a_core.settings",
         "documentation": {}
     },
     {
-        "label": "DEBUG",
+        "label": "ENCRYPT_KEY",
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "ENCRYPT_KEY = env('ENCRYPT_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nif ENVIRONMENT == 'development':    \n    DEBUG = True\nelse:\n    DEBUG = False\nALLOWED_HOSTS = ['*']\nINTERNAL_IPS = [\n    '127.0.0.1',\n    'localhost:8000'",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -961,7 +1044,16 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "ALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'django.contrib.sites',",
+        "peekOfCode": "ALLOWED_HOSTS = ['*']\nINTERNAL_IPS = [\n    '127.0.0.1',\n    'localhost:8000'\n]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "detail": "a_core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INTERNAL_IPS",
+        "kind": 5,
+        "importPath": "a_core.settings",
+        "description": "a_core.settings",
+        "peekOfCode": "INTERNAL_IPS = [\n    '127.0.0.1',\n    'localhost:8000'\n]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -970,7 +1062,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'django.contrib.sites',\n    'django_htmx',\n    'allauth',",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'django.contrib.sites',\n    'admin_honeypot',\n    'django_htmx',",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -979,7 +1071,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "SITE_ID = 1\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    \"allauth.account.middleware.AccountMiddleware\",\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',",
+        "peekOfCode": "SITE_ID = 1\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'whitenoise.middleware.WhiteNoiseMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'allauth.account.middleware.AccountMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -988,7 +1080,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    \"allauth.account.middleware.AccountMiddleware\",\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n    \"django_htmx.middleware.HtmxMiddleware\",",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'whitenoise.middleware.WhiteNoiseMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'allauth.account.middleware.AccountMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1078,7 +1170,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nRECAPTCHA_PUBLIC_KEY = 'http://127.0.0.1:8000/'\nRECAPTCHA_PRIVATE_KEY = 'http://127.0.0.1:8000/'\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nRECAPTCHA_PUBLIC_KEY = 'http://127.0.0.1:8000/'\nRECAPTCHA_PRIVATE_KEY = 'http://127.0.0.1:8000/'\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1087,7 +1179,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\nRECAPTCHA_PUBLIC_KEY = 'http://127.0.0.1:8000/'\nRECAPTCHA_PRIVATE_KEY = 'http://127.0.0.1:8000/'\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = 'media/'",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\nRECAPTCHA_PUBLIC_KEY = 'http://127.0.0.1:8000/'\nRECAPTCHA_PRIVATE_KEY = 'http://127.0.0.1:8000/'\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1096,7 +1188,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "USE_TZ = True\nRECAPTCHA_PUBLIC_KEY = 'http://127.0.0.1:8000/'\nRECAPTCHA_PRIVATE_KEY = 'http://127.0.0.1:8000/'\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'",
+        "peekOfCode": "USE_TZ = True\nRECAPTCHA_PUBLIC_KEY = 'http://127.0.0.1:8000/'\nRECAPTCHA_PRIVATE_KEY = 'http://127.0.0.1:8000/'\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1105,7 +1197,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "RECAPTCHA_PUBLIC_KEY = 'http://127.0.0.1:8000/'\nRECAPTCHA_PRIVATE_KEY = 'http://127.0.0.1:8000/'\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type",
+        "peekOfCode": "RECAPTCHA_PUBLIC_KEY = 'http://127.0.0.1:8000/'\nRECAPTCHA_PRIVATE_KEY = 'http://127.0.0.1:8000/'\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1114,7 +1206,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "RECAPTCHA_PRIVATE_KEY = 'http://127.0.0.1:8000/'\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field",
+        "peekOfCode": "RECAPTCHA_PRIVATE_KEY = 'http://127.0.0.1:8000/'\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1123,7 +1215,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1132,7 +1224,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "STATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True",
+        "peekOfCode": "STATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1141,7 +1233,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox', 'moder']",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1150,7 +1242,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox', 'moder']\ndjango_heroku.settings(locals())",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1159,7 +1251,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox', 'moder']\ndjango_heroku.settings(locals())",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1168,7 +1260,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox', 'moder']\ndjango_heroku.settings(locals())",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1177,7 +1269,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "LOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "LOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox', 'moder']\ndjango_heroku.settings(locals())",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1186,7 +1278,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox', 'moder']\ndjango_heroku.settings(locals())",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1195,7 +1287,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "ACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "ACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox', 'moder']\ndjango_heroku.settings(locals())",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1204,7 +1296,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "ACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "ACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox', 'moder']\ndjango_heroku.settings(locals())",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1213,7 +1305,7 @@
         "kind": 5,
         "importPath": "a_core.urls",
         "description": "a_core.urls",
-        "peekOfCode": "urlpatterns = [\n    path('moder/', admin.site.urls),\n    path('captcha/', include('captcha.urls')),\n    path('accounts/', include('allauth.urls')),\n    path('', home_view, name='home'),\n    path('category/<tag>/', home_view, name='category'),\n    path('post/create/', post_create_view, name='post-create'),\n    path('post/delete/<pk>/', post_delete_view, name='post-delete'),\n    path('post/edit/<pk>/', post_edit_view, name='post-edit'),\n    path('post/<pk>/', post_page_view, name='post'),",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),\n    path('moder/', admin.site.urls),\n    path('captcha/', include('captcha.urls')),\n    path('accounts/', include('allauth.urls')),\n    path('', home_view, name='home'),\n    path('category/<tag>/', home_view, name='category'),\n    path('post/create/', post_create_view, name='post-create'),\n    path('post/delete/<pk>/', post_delete_view, name='post-delete'),\n    path('post/edit/<pk>/', post_edit_view, name='post-edit'),",
         "detail": "a_core.urls",
         "documentation": {}
     },
@@ -1233,6 +1325,15 @@
         "description": "a_inbox.migrations.0001_initial",
         "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Conversation',\n            fields=[\n                ('id', models.CharField(default=uuid.uuid4, editable=False, max_length=100, primary_key=True, serialize=False, unique=True)),",
         "detail": "a_inbox.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "InboxMessageAdmin",
+        "kind": 6,
+        "importPath": "a_inbox.admin",
+        "description": "a_inbox.admin",
+        "peekOfCode": "class InboxMessageAdmin(admin.ModelAdmin):\n    readonly_fields = ('sender', 'conversation', 'body')\nadmin.site.register(InboxMessage, InboxMessageAdmin)\nadmin.site.register(Conversation)",
+        "detail": "a_inbox.admin",
         "documentation": {}
     },
     {
@@ -1258,7 +1359,7 @@
         "kind": 6,
         "importPath": "a_inbox.models",
         "description": "a_inbox.models",
-        "peekOfCode": "class InboxMessage(models.Model):\n    sender = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sent_messages')\n    conversation = models.ForeignKey('Conversation', on_delete=models.CASCADE, related_name='messages')\n    body = models.TextField()\n    created = models.DateTimeField(auto_now_add=True)\n    class Meta:\n        ordering = ['-created']\n    def __str__(self):\n        time_since = timesince(self.created, timezone.now())\n        return f'[{self.sender.username} : {time_since} ago]'",
+        "peekOfCode": "class InboxMessage(models.Model):\n    sender = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sent_messages')\n    conversation = models.ForeignKey('Conversation', on_delete=models.CASCADE, related_name='messages')\n    body = models.TextField()\n    created = models.DateTimeField(auto_now_add=True)\n    @property\n    def body_decrypted(self):\n        f = Fernet(settings.ENCRYPT_KEY)\n        message_decrypted = f.decrypt(self.body)\n        message_decoded = message_decrypted.decode('utf-8')",
         "detail": "a_inbox.models",
         "documentation": {}
     },
@@ -1276,7 +1377,7 @@
         "kind": 5,
         "importPath": "a_inbox.urls",
         "description": "a_inbox.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', inbox_view, name='inbox'),\n    path('c/<conversation_id>/', inbox_view, name='inbox'),\n    path('search_users/', search_users, name='inbox-searchusers'),\n    path('new_message/<recipient_id>', new_message, name='inbox-newmessage'),\n    path('new_reply/<conversation_id>/', new_reply, name='inbox-newreply')\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', inbox_view, name='inbox'),\n    path('c/<conversation_id>/', inbox_view, name='inbox'),\n    path('search_users/', search_users, name='inbox-searchusers'),\n    path('new_message/<recipient_id>', new_message, name='inbox-newmessage'),\n    path('new_reply/<conversation_id>/', new_reply, name='inbox-newreply'),\n    path('notify/<conversation_id>/', notify_newmessage, name=\"notify-newmessage\"),\n    path('notify-inbox/', notify_inbox, name=\"notify-inbox\"),\n]",
         "detail": "a_inbox.urls",
         "documentation": {}
     },
@@ -1285,7 +1386,7 @@
         "kind": 2,
         "importPath": "a_inbox.views",
         "description": "a_inbox.views",
-        "peekOfCode": "def inbox_view(request, conversation_id=None):\n    my_conversations = Conversation.objects.filter(participants=request.user)\n    if conversation_id:\n        conversation = get_object_or_404(my_conversations, id=conversation_id)\n    else:\n        conversation = None\n    context = {\n        'conversation': conversation,\n        'my_conversations' : my_conversations,\n    }",
+        "peekOfCode": "def inbox_view(request, conversation_id=None):\n    my_conversations = Conversation.objects.filter(participants=request.user)\n    if conversation_id:\n        conversation = get_object_or_404(my_conversations, id=conversation_id)\n        latest_message = conversation.messages.first()\n        if conversation.is_seen == False and latest_message.sender != request.user:\n            conversation.is_seen = True\n            conversation.save()\n    else:\n        conversation = None",
         "detail": "a_inbox.views",
         "documentation": {}
     },
@@ -1303,7 +1404,7 @@
         "kind": 2,
         "importPath": "a_inbox.views",
         "description": "a_inbox.views",
-        "peekOfCode": "def new_message(request, recipient_id):\n    recipient = get_object_or_404( User, id=recipient_id )\n    new_message_form = InboxNewMessageForm()\n    if request.method == 'POST':\n        form = InboxNewMessageForm(request.POST)\n        if form.is_valid():\n            message = form.save(commit=False)\n            message.sender = request.user\n            my_conversations  = request.user.conversations.all()\n            for c in my_conversations :",
+        "peekOfCode": "def new_message(request, recipient_id):\n    recipient = get_object_or_404( User, id=recipient_id )\n    new_message_form = InboxNewMessageForm()\n    if request.method == 'POST':\n        form = InboxNewMessageForm(request.POST)\n        if form.is_valid():\n            message = form.save(commit=False)\n            #encrypt\n            message_original = form.cleaned_data['body']\n            message_bytes = message_original.encode('utf-8')",
         "detail": "a_inbox.views",
         "documentation": {}
     },
@@ -1312,7 +1413,34 @@
         "kind": 2,
         "importPath": "a_inbox.views",
         "description": "a_inbox.views",
-        "peekOfCode": "def new_reply(request, conversation_id):\n    new_message_form = InboxNewMessageForm()\n    my_conversations = request.user.conversations.all()\n    conversation = get_object_or_404(my_conversations, id=conversation_id)\n    if request.method == 'POST':\n        form = InboxNewMessageForm(request.POST)\n        if form.is_valid():\n            message = form.save(commit=False)\n            message.sender = request.user\n            message.conversation = conversation",
+        "peekOfCode": "def new_reply(request, conversation_id):\n    new_message_form = InboxNewMessageForm()\n    my_conversations = request.user.conversations.all()\n    conversation = get_object_or_404(my_conversations, id=conversation_id)\n    if request.method == 'POST':\n        form = InboxNewMessageForm(request.POST)\n        if form.is_valid():\n            message = form.save(commit=False)\n            message_original = form.cleaned_data['body']\n            message_bytes = message_original.encode('utf-8')",
+        "detail": "a_inbox.views",
+        "documentation": {}
+    },
+    {
+        "label": "notify_newmessage",
+        "kind": 2,
+        "importPath": "a_inbox.views",
+        "description": "a_inbox.views",
+        "peekOfCode": "def notify_newmessage(request, conversation_id):\n    conversation = get_object_or_404(Conversation, id=conversation_id)\n    latest_message = conversation.messages.first()\n    if conversation.is_seen == False and latest_message.sender != request.user:\n        return render(request, 'a_inbox/notify_icon.html')\n    else:\n        return HttpResponse('')\ndef notify_inbox(request):\n   my_conversations = Conversation.objects.filter(participants=request.user, is_seen=False) \n   for c in my_conversations:",
+        "detail": "a_inbox.views",
+        "documentation": {}
+    },
+    {
+        "label": "notify_inbox",
+        "kind": 2,
+        "importPath": "a_inbox.views",
+        "description": "a_inbox.views",
+        "peekOfCode": "def notify_inbox(request):\n   my_conversations = Conversation.objects.filter(participants=request.user, is_seen=False) \n   for c in my_conversations:\n       latest_message = c.messages.first()\n       if latest_message.sender != request.user:\n           return render(request, 'a_inbox/notify_icon.html')\n       return HttpResponse('')",
+        "detail": "a_inbox.views",
+        "documentation": {}
+    },
+    {
+        "label": "f",
+        "kind": 5,
+        "importPath": "a_inbox.views",
+        "description": "a_inbox.views",
+        "peekOfCode": "f = Fernet(settings.ENCRYPT_KEY)\n@login_required\ndef inbox_view(request, conversation_id=None):\n    my_conversations = Conversation.objects.filter(participants=request.user)\n    if conversation_id:\n        conversation = get_object_or_404(my_conversations, id=conversation_id)\n        latest_message = conversation.messages.first()\n        if conversation.is_seen == False and latest_message.sender != request.user:\n            conversation.is_seen = True\n            conversation.save()",
         "detail": "a_inbox.views",
         "documentation": {}
     },
