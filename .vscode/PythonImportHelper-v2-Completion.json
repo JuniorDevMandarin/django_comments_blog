@@ -25,6 +25,15 @@
         "documentation": {}
     },
     {
+        "label": "dj_database_url",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "dj_database_url",
+        "description": "dj_database_url",
+        "detail": "dj_database_url",
+        "documentation": {}
+    },
+    {
         "label": "Env",
         "importPath": "environ",
         "description": "environ",
@@ -1107,7 +1116,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'a_core.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\nCKEDIOR_CONFIGS = {",
+        "peekOfCode": "WSGI_APPLICATION = 'a_core.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\nPOSTGRES_LOCALLY = False",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1116,7 +1125,16 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\nCKEDIOR_CONFIGS = {\n    'default': {\n        'toolbar': 'full',\n        'height': 300,",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\nPOSTGRES_LOCALLY = False\nif ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:\n    DATABASES['default'] = dj_database_url.parse(env('DATABASE_URL'))\nCKEDIOR_CONFIGS = {",
+        "detail": "a_core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "POSTGRES_LOCALLY",
+        "kind": 5,
+        "importPath": "a_core.settings",
+        "description": "a_core.settings",
+        "peekOfCode": "POSTGRES_LOCALLY = False\nif ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:\n    DATABASES['default'] = dj_database_url.parse(env('DATABASE_URL'))\nCKEDIOR_CONFIGS = {\n    'default': {\n        'toolbar': 'full',\n        'height': 300,\n    }\n}\nCKEDITOR_UPLOAD_PATH = 'content/ckeditor/'",
         "detail": "a_core.settings",
         "documentation": {}
     },
