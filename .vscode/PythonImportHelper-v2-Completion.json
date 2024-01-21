@@ -1732,7 +1732,7 @@
         "kind": 6,
         "importPath": "a_posts.forms",
         "description": "a_posts.forms",
-        "peekOfCode": "class PostEditForm(ModelForm):\n    class Meta:\n        model = Post\n        fields = ['body', 'tags']\n        labels = {\n            'body': '',\n            'tags': 'Category'\n        }\n        widgets = {\n            'body': forms.Textarea(attrs={'rows': 3,",
+        "peekOfCode": "class PostEditForm(ModelForm):\n    paragragh=RichTextField()\n    italic = RichTextField()\n    link = RichTextField()\n    strong = RichTextField()\n    class Meta:\n        model = Post\n        fields = ['text', 'tags']\n        labels = {\n            'text': '',",
         "detail": "a_posts.forms",
         "documentation": {}
     },

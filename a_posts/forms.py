@@ -27,15 +27,20 @@ class PostCreateForm(ModelForm):
 
 
 class PostEditForm(ModelForm):
+
+    paragragh=RichTextField()
+    italic = RichTextField()
+    link = RichTextField()
+    strong = RichTextField()
     class Meta:
         model = Post
-        fields = ['body', 'tags']
+        fields = ['text', 'tags']
         labels = {
-            'body': '',
+            'text': '',
             'tags': 'Category'
         }
         widgets = {
-            'body': forms.Textarea(attrs={'rows': 3,
+            'text': forms.Textarea(attrs={'rows': 3,
                                    'class': 'font1 text-4xl'}),
             'tags': forms.CheckboxSelectMultiple(),
         }
