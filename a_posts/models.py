@@ -63,7 +63,13 @@ class Post(models.Model):
     class Meta:
         ordering = ['-created']
     
-  
+    @property
+    def photo(self):
+        try:
+            photo = self.photo_field.url
+        except:
+            photo = static('images/avatar_default.svg')
+        return photo
     
     # def save(self, *args, **kwargs):
     #     super().save(*args, **kwargs)

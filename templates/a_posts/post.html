@@ -8,7 +8,7 @@
         {% if post.image %}
             <a href="{% url 'post' post.id %}"><img class="w-full"  src="{{post.image}}"></a>
         {% else %}
-            <a href="{% url 'post' post.id %}"><img src="media/{{post.photo_field}}"></a>
+            <a href="{% url 'post' post.id %}"><img src="{{post.photo}}"></a>
         {% endif %}
     </figure>
     <div class="p-4 pb-2">
