@@ -11,8 +11,8 @@ from bleach import clean
 from ckeditor.fields import RichTextField
 from django.db import models
 from PIL import Image
-
-
+from django.templatetags.static import static
+from django_resized import ResizedImageField
 def strip_tags_except_allowed(value, allowed_tags):
     """
     Strip HTML tags from the given value, except for the allowed_tags.
@@ -44,7 +44,7 @@ class Post(models.Model):
     artist = models.CharField(max_length=500, null=True)
     # url = models.URLField(max_length=500, null=True, blank=True)
     # image = models.URLField(max_length=500, null=True, blank=True)
-    photo_field = models.ImageField(upload_to='images/', null=True, blank=True)
+    photo_field = ResizedImageField(size=[320, 240], quality=85, upload_to='images/', null=True, blank=True)
     author = models.ForeignKey(User, on_delete=models.SET_NULL , null=True, related_name='posts')
     body = models.TextField()
     tags = models.ManyToManyField('Tag')
@@ -63,24 +63,32 @@ class Post(models.Model):
     class Meta:
         ordering = ['-created']
     
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
+    @property
+    def photo(self):
+        try:
+            photo = self.photo_field.url
+        except:
+            photo = static('images/avatar_default.svg')
+        return photo
+    
+    # def save(self, *args, **kwargs):
+    #     super().save(*args, **kwargs)
 
-        if self.photo_field:
-            # Open the image file
-            img = Image.open(self.photo_field.path)
+    #     if self.photo_field:
+    #         # Open the image file
+    #         img = Image.open(self.photo_field.path)
 
-            # Set the desired size
-            target_size = (320, 240)
+    #         # Set the desired size
+    #         target_size = (320, 240)
 
-            # Resize the image only if it's in an acceptable format
-            allowed_formats = ['JPEG', 'PNG', 'GIF']
-            if img.format.upper() in allowed_formats:
-                img.thumbnail(target_size)
-                img.save(self.photo_field.path)
-            else:
-                # Handle unsupported format (you may want to raise an exception or log a message)
-                pass
+    #         # Resize the image only if it's in an acceptable format
+    #         allowed_formats = ['JPEG', 'PNG', 'GIF']
+    #         if img.format.upper() in allowed_formats:
+    #             img.thumbnail(target_size)
+    #             img.save(self.photo_field.path)
+    #         else:
+    #             # Handle unsupported format (you may want to raise an exception or log a message)
+    #             pass
     
     
 class LikedPost(models.Model):

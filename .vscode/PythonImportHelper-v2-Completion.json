@@ -415,6 +415,62 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -440,6 +496,14 @@
     },
     {
         "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -849,6 +913,24 @@
         "documentation": {}
     },
     {
+        "label": "cloudinary_storage.storage",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cloudinary_storage.storage",
+        "description": "cloudinary_storage.storage",
+        "detail": "cloudinary_storage.storage",
+        "documentation": {}
+    },
+    {
+        "label": "django_resized.forms",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django_resized.forms",
+        "description": "django_resized.forms",
+        "detail": "django_resized.forms",
+        "documentation": {}
+    },
+    {
         "label": "Library",
         "importPath": "django.template",
         "description": "django.template",
@@ -913,6 +995,38 @@
         "documentation": {}
     },
     {
+        "label": "static",
+        "importPath": "django.templatetags.static",
+        "description": "django.templatetags.static",
+        "isExtraImport": true,
+        "detail": "django.templatetags.static",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.templatetags.static",
+        "description": "django.templatetags.static",
+        "isExtraImport": true,
+        "detail": "django.templatetags.static",
+        "documentation": {}
+    },
+    {
+        "label": "ResizedImageField",
+        "importPath": "django_resized",
+        "description": "django_resized",
+        "isExtraImport": true,
+        "detail": "django_resized",
+        "documentation": {}
+    },
+    {
+        "label": "ResizedImageField",
+        "importPath": "django_resized",
+        "description": "django_resized",
+        "isExtraImport": true,
+        "detail": "django_resized",
+        "documentation": {}
+    },
+    {
         "label": "BeautifulSoup",
         "importPath": "bs4",
         "description": "bs4",
@@ -935,14 +1049,6 @@
         "description": "django.core.paginator",
         "isExtraImport": true,
         "detail": "django.core.paginator",
-        "documentation": {}
-    },
-    {
-        "label": "static",
-        "importPath": "django.templatetags.static",
-        "description": "django.templatetags.static",
-        "isExtraImport": true,
-        "detail": "django.templatetags.static",
         "documentation": {}
     },
     {
@@ -1071,7 +1177,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'django.contrib.sites',\n    'admin_honeypot',\n    'django_htmx',",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'cloudinary',\n    'cloudinary_storage',\n    'django.contrib.sites',",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1206,7 +1312,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "USE_TZ = True\nRECAPTCHA_PUBLIC_KEY = 'http://127.0.0.1:8000/'\nRECAPTCHA_PRIVATE_KEY = 'http://127.0.0.1:8000/'\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'",
+        "peekOfCode": "USE_TZ = True\nRECAPTCHA_PUBLIC_KEY = 'http://127.0.0.1:8000/'\nRECAPTCHA_PRIVATE_KEY = 'http://127.0.0.1:8000/'\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nif ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1215,7 +1321,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "RECAPTCHA_PUBLIC_KEY = 'http://127.0.0.1:8000/'\nRECAPTCHA_PRIVATE_KEY = 'http://127.0.0.1:8000/'\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type",
+        "peekOfCode": "RECAPTCHA_PUBLIC_KEY = 'http://127.0.0.1:8000/'\nRECAPTCHA_PRIVATE_KEY = 'http://127.0.0.1:8000/'\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nif ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:\n    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1224,7 +1330,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "RECAPTCHA_PRIVATE_KEY = 'http://127.0.0.1:8000/'\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field",
+        "peekOfCode": "RECAPTCHA_PRIVATE_KEY = 'http://127.0.0.1:8000/'\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nif ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:\n    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'\nelse:",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1233,7 +1339,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nif ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:\n    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'\nelse:\n    MEDIA_ROOT = BASE_DIR / 'media'\nCLOUDINARY_STORAGE = {\n    'CLOUD_NAME': env('CLOUD_NAME'),",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1242,7 +1348,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "STATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True",
+        "peekOfCode": "STATICFILES_DIRS = [BASE_DIR / 'static']\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nif ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:\n    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'\nelse:\n    MEDIA_ROOT = BASE_DIR / 'media'\nCLOUDINARY_STORAGE = {\n    'CLOUD_NAME': env('CLOUD_NAME'),\n    'API_KEY': env('CLOUD_API_KEY'),",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1251,7 +1357,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox', 'moder']",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nif ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:\n    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'\nelse:\n    MEDIA_ROOT = BASE_DIR / 'media'\nCLOUDINARY_STORAGE = {\n    'CLOUD_NAME': env('CLOUD_NAME'),\n    'API_KEY': env('CLOUD_API_KEY'),\n    'API_SECRET': env('CLOUD_API_SECRET'),",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1260,16 +1366,16 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox', 'moder']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "MEDIA_URL = 'media/'\nif ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:\n    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'\nelse:\n    MEDIA_ROOT = BASE_DIR / 'media'\nCLOUDINARY_STORAGE = {\n    'CLOUD_NAME': env('CLOUD_NAME'),\n    'API_KEY': env('CLOUD_API_KEY'),\n    'API_SECRET': env('CLOUD_API_SECRET'),\n}",
         "detail": "a_core.settings",
         "documentation": {}
     },
     {
-        "label": "MEDIA_ROOT",
+        "label": "CLOUDINARY_STORAGE",
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox', 'moder']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "CLOUDINARY_STORAGE = {\n    'CLOUD_NAME': env('CLOUD_NAME'),\n    'API_KEY': env('CLOUD_API_KEY'),\n    'API_SECRET': env('CLOUD_API_SECRET'),\n}\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1517,6 +1623,42 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "a_posts.migrations.0007_alter_post_photo_field",
+        "description": "a_posts.migrations.0007_alter_post_photo_field",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('a_posts', '0006_reply_level'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='post',\n            name='photo_field',\n            field=models.ImageField(blank=True, null=True, storage=cloudinary_storage.storage.MediaCloudinaryStorage(), upload_to='images/'),\n        ),",
+        "detail": "a_posts.migrations.0007_alter_post_photo_field",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "a_posts.migrations.0008_alter_post_photo_field",
+        "description": "a_posts.migrations.0008_alter_post_photo_field",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('a_posts', '0007_alter_post_photo_field'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='post',\n            name='photo_field',\n            field=models.FileField(blank=True, null=True, storage=cloudinary_storage.storage.MediaCloudinaryStorage(), upload_to='images/'),\n        ),",
+        "detail": "a_posts.migrations.0008_alter_post_photo_field",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "a_posts.migrations.0009_alter_post_photo_field",
+        "description": "a_posts.migrations.0009_alter_post_photo_field",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('a_posts', '0008_alter_post_photo_field'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='post',\n            name='photo_field',\n            field=models.ImageField(blank=True, null=True, upload_to='images/'),\n        ),",
+        "detail": "a_posts.migrations.0009_alter_post_photo_field",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "a_posts.migrations.0010_alter_post_photo_field",
+        "description": "a_posts.migrations.0010_alter_post_photo_field",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('a_posts', '0009_alter_post_photo_field'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='post',\n            name='photo_field',\n            field=django_resized.forms.ResizedImageField(blank=True, crop=None, force_format=None, keep_meta=True, null=True, quality=85, scale=None, size=[320, 240], upload_to='images/'),\n        ),",
+        "detail": "a_posts.migrations.0010_alter_post_photo_field",
+        "documentation": {}
+    },
+    {
         "label": "sidebar_view",
         "kind": 2,
         "importPath": "a_posts.templatetags.sidebar",
@@ -1602,7 +1744,7 @@
         "kind": 6,
         "importPath": "a_posts.models",
         "description": "a_posts.models",
-        "peekOfCode": "class Post(models.Model):\n    title = models.CharField(max_length=500)\n    artist = models.CharField(max_length=500, null=True)\n    # url = models.URLField(max_length=500, null=True, blank=True)\n    # image = models.URLField(max_length=500, null=True, blank=True)\n    photo_field = models.ImageField(upload_to='images/', null=True, blank=True)\n    author = models.ForeignKey(User, on_delete=models.SET_NULL , null=True, related_name='posts')\n    body = models.TextField()\n    tags = models.ManyToManyField('Tag')\n    text_file = models.FileField(upload_to='files/', null=True, blank=True)",
+        "peekOfCode": "class Post(models.Model):\n    title = models.CharField(max_length=500)\n    artist = models.CharField(max_length=500, null=True)\n    # url = models.URLField(max_length=500, null=True, blank=True)\n    # image = models.URLField(max_length=500, null=True, blank=True)\n    photo_field = ResizedImageField(size=[320, 240], quality=85, upload_to='images/', null=True, blank=True)\n    author = models.ForeignKey(User, on_delete=models.SET_NULL , null=True, related_name='posts')\n    body = models.TextField()\n    tags = models.ManyToManyField('Tag')\n    text_file = models.FileField(upload_to='files/', null=True, blank=True)",
         "detail": "a_posts.models",
         "documentation": {}
     },
@@ -1805,6 +1947,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "a_users.migrations.0002_alter_profile_image",
+        "description": "a_users.migrations.0002_alter_profile_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('a_users', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='profile',\n            name='image',\n            field=django_resized.forms.ResizedImageField(blank=True, crop=None, force_format=None, keep_meta=True, null=True, quality=85, scale=None, size=[600, 600], upload_to='avatars/'),\n        ),",
+        "detail": "a_users.migrations.0002_alter_profile_image",
+        "documentation": {}
+    },
+    {
         "label": "AUsersConfig",
         "kind": 6,
         "importPath": "a_users.apps",
@@ -1827,7 +1978,7 @@
         "kind": 6,
         "importPath": "a_users.models",
         "description": "a_users.models",
-        "peekOfCode": "class Profile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    image = models.ImageField(upload_to='avatars/', null=True, blank=True) \n    realname = models.CharField(max_length=20, null=True, blank=True)\n    email = models.EmailField(unique=True, null=True)\n    location = models.CharField(max_length=20, null=True, blank=True)\n    bio = models.TextField(null=True, blank=True) \n    created = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return str(self.user)",
+        "peekOfCode": "class Profile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    image = ResizedImageField(size=[600, 600], quality=85, upload_to='avatars/', null=True, blank=True) \n    realname = models.CharField(max_length=20, null=True, blank=True)\n    email = models.EmailField(unique=True, null=True)\n    location = models.CharField(max_length=20, null=True, blank=True)\n    bio = models.TextField(null=True, blank=True) \n    created = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return str(self.user)",
         "detail": "a_users.models",
         "documentation": {}
     },
