@@ -63,13 +63,7 @@ class Post(models.Model):
     class Meta:
         ordering = ['-created']
     
-    @property
-    def photo(self):
-        try:
-            photo = self.photo_field.url
-        except:
-            photo = self.photo_field.url
-        return photo
+  
     
     # def save(self, *args, **kwargs):
     #     super().save(*args, **kwargs)
