@@ -26,7 +26,7 @@ x-transition:enter-end="opacity-100 mt-0">
             <li>
                 <a href="{% url 'post' post.id %}" class="flex items-stretch justify-between">
                     <div class="flex items-center truncate">
-                        <img class="w-10 h-10 rounded-lg object-cover mr-3 shrink-0" src="/media/{{post.photo_field}}">
+                        <img class="w-10 h-10 rounded-lg object-cover mr-3 shrink-0" src="{{post.photo}}">
                         {% if post.author %}
                         <img class="w-6 h-6 rounded-full object-cover mr-1" src=" {{post.author.profile.avatar}} ">
                         <span class="font-bold text-sm mr-1">{{ post.author.username }}</span>
