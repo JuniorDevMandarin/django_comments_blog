@@ -1132,7 +1132,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = env('SECRET_KEY')\nENCRYPT_KEY = env('ENCRYPT_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nif ENVIRONMENT == 'production':    \n    DEBUG = True\nelse:",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = env('SECRET_KEY')\nENCRYPT_KEY = env('ENCRYPT_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nif ENVIRONMENT == 'development':    \n    DEBUG = True\nelse:",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1141,7 +1141,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "SECRET_KEY = env('SECRET_KEY')\nENCRYPT_KEY = env('ENCRYPT_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nif ENVIRONMENT == 'production':    \n    DEBUG = True\nelse:\n    DEBUG = False\nALLOWED_HOSTS = ['*']\nINTERNAL_IPS = [\n    '127.0.0.1',",
+        "peekOfCode": "SECRET_KEY = env('SECRET_KEY')\nENCRYPT_KEY = env('ENCRYPT_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nif ENVIRONMENT == 'development':    \n    DEBUG = True\nelse:\n    DEBUG = False\nALLOWED_HOSTS = ['*']\nINTERNAL_IPS = [\n    '127.0.0.1',",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1150,7 +1150,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "ENCRYPT_KEY = env('ENCRYPT_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nif ENVIRONMENT == 'production':    \n    DEBUG = True\nelse:\n    DEBUG = False\nALLOWED_HOSTS = ['*']\nINTERNAL_IPS = [\n    '127.0.0.1',\n    'localhost:8000'",
+        "peekOfCode": "ENCRYPT_KEY = env('ENCRYPT_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nif ENVIRONMENT == 'development':    \n    DEBUG = True\nelse:\n    DEBUG = False\nALLOWED_HOSTS = ['*']\nINTERNAL_IPS = [\n    '127.0.0.1',\n    'localhost:8000'",
         "detail": "a_core.settings",
         "documentation": {}
     },
