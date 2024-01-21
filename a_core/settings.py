@@ -198,7 +198,20 @@ CLOUDINARY_STORAGE = {
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+if ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = env('EMAIL_ADDRESS')
+    EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    DEFAULT_FROM_EMAIL = f'ecomment {env("EMAIL_ADDRESS")}'
+    ACCOUNT_EMAIL_SUBJECT_PREFIX = ''
+    
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    
 ACCOUNT_EMAIL_REQUIRED = True
 
 ACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox', 'moder']

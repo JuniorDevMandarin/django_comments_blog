@@ -1408,7 +1408,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox', 'moder']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nif ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:\n    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\n    EMAIL_HOST = 'smtp.gmail.com'\n    EMAIL_HOST_USER = env('EMAIL_ADDRESS')\n    EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')\n    EMAIL_PORT = 587\n    EMAIL_USE_TLS = True\n    DEFAULT_FROM_EMAIL = f'ecomment {env(\"EMAIL_ADDRESS\")}'",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1417,16 +1417,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "LOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox', 'moder']\ndjango_heroku.settings(locals())",
-        "detail": "a_core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_BACKEND",
-        "kind": 5,
-        "importPath": "a_core.settings",
-        "description": "a_core.settings",
-        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'\nACCOUNT_EMAIL_REQUIRED = True\nACCOUNT_USERNAME_BLACKLIST = ['admin', 'accounts', 'profile', 'category', 'post', 'inbox', 'moder']\ndjango_heroku.settings(locals())",
+        "peekOfCode": "LOGIN_REDIRECT_URL = '/'\nif ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:\n    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\n    EMAIL_HOST = 'smtp.gmail.com'\n    EMAIL_HOST_USER = env('EMAIL_ADDRESS')\n    EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')\n    EMAIL_PORT = 587\n    EMAIL_USE_TLS = True\n    DEFAULT_FROM_EMAIL = f'ecomment {env(\"EMAIL_ADDRESS\")}'\n    ACCOUNT_EMAIL_SUBJECT_PREFIX = ''",
         "detail": "a_core.settings",
         "documentation": {}
     },
