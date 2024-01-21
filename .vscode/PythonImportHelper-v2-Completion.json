@@ -695,6 +695,54 @@
         "documentation": {}
     },
     {
+        "label": "receiver",
+        "importPath": "django.dispatch",
+        "description": "django.dispatch",
+        "isExtraImport": true,
+        "detail": "django.dispatch",
+        "documentation": {}
+    },
+    {
+        "label": "receiver",
+        "importPath": "django.dispatch",
+        "description": "django.dispatch",
+        "isExtraImport": true,
+        "detail": "django.dispatch",
+        "documentation": {}
+    },
+    {
+        "label": "post_save",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "post_save",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "Site",
+        "importPath": "django.contrib.sites.models",
+        "description": "django.contrib.sites.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.sites.models",
+        "documentation": {}
+    },
+    {
+        "label": "EmailMessage",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
@@ -1076,19 +1124,11 @@
         "documentation": {}
     },
     {
-        "label": "receiver",
-        "importPath": "django.dispatch",
-        "description": "django.dispatch",
+        "label": "EmailAddress",
+        "importPath": "allauth.account.models",
+        "description": "allauth.account.models",
         "isExtraImport": true,
-        "detail": "django.dispatch",
-        "documentation": {}
-    },
-    {
-        "label": "post_save",
-        "importPath": "django.db.models.signals",
-        "description": "django.db.models.signals",
-        "isExtraImport": true,
-        "detail": "django.db.models.signals",
+        "detail": "allauth.account.models",
         "documentation": {}
     },
     {
@@ -1097,6 +1137,14 @@
         "description": "django.contrib.auth",
         "isExtraImport": true,
         "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "send_email_confirmation",
+        "importPath": "allauth.account.utils",
+        "description": "allauth.account.utils",
+        "isExtraImport": true,
+        "detail": "allauth.account.utils",
         "documentation": {}
     },
     {
@@ -1480,7 +1528,7 @@
         "kind": 6,
         "importPath": "a_inbox.apps",
         "description": "a_inbox.apps",
-        "peekOfCode": "class AInboxConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'a_inbox'",
+        "peekOfCode": "class AInboxConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'a_inbox'\n    def ready(self):\n        import a_inbox.signals",
         "detail": "a_inbox.apps",
         "documentation": {}
     },
@@ -1509,6 +1557,15 @@
         "description": "a_inbox.models",
         "peekOfCode": "class Conversation(models.Model):\n    id = models.CharField(max_length=100, default=uuid.uuid4, unique=True, primary_key=True, editable=False)\n    participants = models.ManyToManyField(User, related_name='conversations')\n    lastmessage_created = models.DateTimeField(default=timezone.now)\n    is_seen = models.BooleanField(default=False)\n    class Meta:\n        ordering = ['-lastmessage_created']\n    def __str__(self):\n        user_names = \", \".join(user.username for user in self.participants.all())\n        return f'[{user_names}]'",
         "detail": "a_inbox.models",
+        "documentation": {}
+    },
+    {
+        "label": "send_email",
+        "kind": 2,
+        "importPath": "a_inbox.signals",
+        "description": "a_inbox.signals",
+        "peekOfCode": "def send_email(sender, instance, created, **kwargs):\n    message = instance\n    site_domain = Site.objects.get(pk=1).domain\n    if created:\n        for participant in message.conversation.participants.all():\n            if participant != message.sender and participant.emailaddress_set.filter(primary=True, verified=True).exists():\n                try:\n                    email_address = participant.emailaddress_set.get(primary=True, verified=True)\n                    email_subject = f'New Message from {message.sender}'\n                    email_body = f'I have good news for you!\\n You received a new message at {site_domain}'",
+        "detail": "a_inbox.signals",
         "documentation": {}
     },
     {
@@ -2020,7 +2077,16 @@
         "kind": 2,
         "importPath": "a_users.signals",
         "description": "a_users.signals",
-        "peekOfCode": "def update_user(sender, instance, created, **kwargs):\n    profile = instance\n    if created == False:\n        user = get_object_or_404(User, id=profile.user.id)\n        if user.email != profile.email:\n            user.email = profile.email\n            user.save()",
+        "peekOfCode": "def update_user(sender, instance, created, **kwargs):\n    profile = instance\n    if created == False:\n        user = get_object_or_404(User, id=profile.user.id)\n        if user.email != profile.email:\n            user.email = profile.email\n            user.save()\n@receiver(post_save, sender=Profile)\ndef update_account_email(sender, instance, created, **kwargs):\n    profile = instance",
+        "detail": "a_users.signals",
+        "documentation": {}
+    },
+    {
+        "label": "update_account_email",
+        "kind": 2,
+        "importPath": "a_users.signals",
+        "description": "a_users.signals",
+        "peekOfCode": "def update_account_email(sender, instance, created, **kwargs):\n    profile = instance\n    if not created:\n        try:\n            email_address = EmailAddress.objects.get_primary(profile.user)\n            if email_address.email != profile.email:\n                email_address.email = profile.email\n                email_address.verified = False\n                email_address.save()\n        except:",
         "detail": "a_users.signals",
         "documentation": {}
     },
@@ -2038,7 +2104,7 @@
         "kind": 2,
         "importPath": "a_users.views",
         "description": "a_users.views",
-        "peekOfCode": "def profile_edit_view(request):\n    form = ProfileForm(instance=request.user.profile)\n    if request.method == 'POST':\n        form = ProfileForm(request.POST, \n                           request.FILES,\n                           instance=request.user.profile)\n        if form.is_valid():\n            form.save()\n            return redirect('profile')\n    if request.path == reverse('profile-onboarding'):",
+        "peekOfCode": "def profile_edit_view(request):\n    form = ProfileForm(instance=request.user.profile)\n    if request.method == 'POST':\n        form = ProfileForm(request.POST, \n                           request.FILES,\n                           instance=request.user.profile)\n        if form.is_valid():\n            form.save()\n            if request.user.emailaddress_set.get(primary=True).verified:\n                return redirect('profile')",
         "detail": "a_users.views",
         "documentation": {}
     },
@@ -2047,7 +2113,16 @@
         "kind": 2,
         "importPath": "a_users.views",
         "description": "a_users.views",
-        "peekOfCode": "def profile_delete_view(request):\n    user = request.user\n    if request.method == 'POST':\n        logout(request)\n        user.delete()\n        messages.success(request, 'Account deleted, what a pity')\n        return redirect('home')\n    return render(request, 'a_users/profile_delete.html')",
+        "peekOfCode": "def profile_delete_view(request):\n    user = request.user\n    if request.method == 'POST':\n        logout(request)\n        user.delete()\n        messages.success(request, 'Account deleted, what a pity')\n        return redirect('home')\n    return render(request, 'a_users/profile_delete.html')\ndef profile_verify_email(request):\n    send_email_confirmation(request, request.user)",
+        "detail": "a_users.views",
+        "documentation": {}
+    },
+    {
+        "label": "profile_verify_email",
+        "kind": 2,
+        "importPath": "a_users.views",
+        "description": "a_users.views",
+        "peekOfCode": "def profile_verify_email(request):\n    send_email_confirmation(request, request.user)\n    return redirect('profile')",
         "detail": "a_users.views",
         "documentation": {}
     },
