@@ -25,9 +25,9 @@
             <span class='text-gray-500'>No author</span>            
         </div> 
         {% endif %}
-        <p class="text-5xl mb-10 px-4 font1">{{post.body}}</p>
+        {% comment %} <p class="text-5xl mb-10 px-4 font1">{{post.body}}</p> {% endcomment %}
         <p class="text-5xl mb-10 px-4 font1">{{post.text|safe}}</p>
-        <p class="text-5xl mb-10 px-4 font1">{{post.text_file}}</p>
+        <p class="mb-10 px-4 font1">{{post.text_file}}</p>
         <div class="flex items-center gap-2 text-sm mb-5 flex-wrap">
             {% for tag in post.tags.all %}
                 <a href="{% url 'category' tag.slug %}" class="bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-800 hover:text-white">{{ tag }}</a>

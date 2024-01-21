@@ -1723,7 +1723,7 @@
         "kind": 6,
         "importPath": "a_posts.forms",
         "description": "a_posts.forms",
-        "peekOfCode": "class PostCreateForm(ModelForm):\n    captcha = CaptchaField()\n    paragragh=RichTextField()\n    italic = RichTextField()\n    link = RichTextField()\n    strong = RichTextField()\n    class Meta:\n        model = Post\n        fields = [ 'title', 'text', 'email', 'text_file', 'body', 'author', 'tags',  'photo_field']\n        labels = {",
+        "peekOfCode": "class PostCreateForm(ModelForm):\n    captcha = CaptchaField()\n    paragragh=RichTextField()\n    italic = RichTextField()\n    link = RichTextField()\n    strong = RichTextField()\n    class Meta:\n        model = Post\n        fields = [ 'title', 'text', 'email', 'text_file', 'author', 'tags',  'photo_field']\n        labels = {",
         "detail": "a_posts.forms",
         "documentation": {}
     },

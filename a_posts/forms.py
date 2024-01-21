@@ -12,7 +12,7 @@ class PostCreateForm(ModelForm):
     strong = RichTextField()
     class Meta:
         model = Post
-        fields = [ 'title', 'text', 'email', 'text_file', 'body', 'author', 'tags',  'photo_field']
+        fields = [ 'title', 'text', 'email', 'text_file', 'author', 'tags',  'photo_field']
         labels = {
             'body' : 'Caption',
             'tags' : 'Category'
