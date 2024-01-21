@@ -68,7 +68,7 @@ class Post(models.Model):
         try:
             photo = self.photo_field.url
         except:
-            photo = static('images/avatar_default.svg')
+            photo = self.photo_field.url
         return photo
     
     # def save(self, *args, **kwargs):
