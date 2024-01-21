@@ -190,6 +190,7 @@ CLOUDINARY_STORAGE = {
     'CLOUD_NAME': env('CLOUD_NAME'),
     'API_KEY': env('CLOUD_API_KEY'),
     'API_SECRET': env('CLOUD_API_SECRET'),
+    'SECURE': True,
     'RAW_MEDIA_AS_ATTACHMENT': True, 
 }
 # Default primary key field type

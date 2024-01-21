@@ -471,6 +471,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -922,6 +938,14 @@
         "documentation": {}
     },
     {
+        "label": "RawMediaCloudinaryStorage",
+        "importPath": "cloudinary_storage.storage",
+        "description": "cloudinary_storage.storage",
+        "isExtraImport": true,
+        "detail": "cloudinary_storage.storage",
+        "documentation": {}
+    },
+    {
         "label": "django_resized.forms",
         "kind": 6,
         "isExtraImport": true,
@@ -1366,7 +1390,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "MEDIA_URL = 'media/'\nif ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:\n    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'\nelse:\n    MEDIA_ROOT = BASE_DIR / 'media'\nCLOUDINARY_STORAGE = {\n    'CLOUD_NAME': env('CLOUD_NAME'),\n    'API_KEY': env('CLOUD_API_KEY'),\n    'API_SECRET': env('CLOUD_API_SECRET'),\n}",
+        "peekOfCode": "MEDIA_URL = 'media/'\nif ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:\n    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'\nelse:\n    MEDIA_ROOT = BASE_DIR / 'media'\nCLOUDINARY_STORAGE = {\n    'CLOUD_NAME': env('CLOUD_NAME'),\n    'API_KEY': env('CLOUD_API_KEY'),\n    'API_SECRET': env('CLOUD_API_SECRET'),\n    'SECURE': True,",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1375,7 +1399,7 @@
         "kind": 5,
         "importPath": "a_core.settings",
         "description": "a_core.settings",
-        "peekOfCode": "CLOUDINARY_STORAGE = {\n    'CLOUD_NAME': env('CLOUD_NAME'),\n    'API_KEY': env('CLOUD_API_KEY'),\n    'API_SECRET': env('CLOUD_API_SECRET'),\n}\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nEMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'",
+        "peekOfCode": "CLOUDINARY_STORAGE = {\n    'CLOUD_NAME': env('CLOUD_NAME'),\n    'API_KEY': env('CLOUD_API_KEY'),\n    'API_SECRET': env('CLOUD_API_SECRET'),\n    'SECURE': True,\n    'RAW_MEDIA_AS_ATTACHMENT': True, \n}\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "a_core.settings",
         "documentation": {}
     },
@@ -1659,6 +1683,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "a_posts.migrations.0011_alter_post_text_file",
+        "description": "a_posts.migrations.0011_alter_post_text_file",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('a_posts', '0010_alter_post_photo_field'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='post',\n            name='text_file',\n            field=models.FileField(blank=True, null=True, storage=cloudinary_storage.storage.RawMediaCloudinaryStorage(), upload_to='files/'),\n        ),",
+        "detail": "a_posts.migrations.0011_alter_post_text_file",
+        "documentation": {}
+    },
+    {
         "label": "sidebar_view",
         "kind": 2,
         "importPath": "a_posts.templatetags.sidebar",
@@ -1744,7 +1777,7 @@
         "kind": 6,
         "importPath": "a_posts.models",
         "description": "a_posts.models",
-        "peekOfCode": "class Post(models.Model):\n    title = models.CharField(max_length=500)\n    artist = models.CharField(max_length=500, null=True)\n    # url = models.URLField(max_length=500, null=True, blank=True)\n    # image = models.URLField(max_length=500, null=True, blank=True)\n    photo_field = ResizedImageField(size=[320, 240], quality=85, upload_to='images/', null=True, blank=True)\n    author = models.ForeignKey(User, on_delete=models.SET_NULL , null=True, related_name='posts')\n    body = models.TextField()\n    tags = models.ManyToManyField('Tag')\n    text_file = models.FileField(upload_to='files/', null=True, blank=True)",
+        "peekOfCode": "class Post(models.Model):\n    title = models.CharField(max_length=500)\n    artist = models.CharField(max_length=500, null=True)\n    # url = models.URLField(max_length=500, null=True, blank=True)\n    # image = models.URLField(max_length=500, null=True, blank=True)\n    photo_field = ResizedImageField(size=[320, 240], quality=85, upload_to='images/', null=True, blank=True)\n    author = models.ForeignKey(User, on_delete=models.SET_NULL , null=True, related_name='posts')\n    body = models.TextField()\n    tags = models.ManyToManyField('Tag')\n    text_file = models.FileField(upload_to='files/',   storage=RawMediaCloudinaryStorage(), null=True, blank=True)",
         "detail": "a_posts.models",
         "documentation": {}
     },

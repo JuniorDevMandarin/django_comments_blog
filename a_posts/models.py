@@ -13,6 +13,7 @@ from django.db import models
 from PIL import Image
 from django.templatetags.static import static
 from django_resized import ResizedImageField
+from cloudinary_storage.storage import RawMediaCloudinaryStorage
 def strip_tags_except_allowed(value, allowed_tags):
     """
     Strip HTML tags from the given value, except for the allowed_tags.
@@ -48,7 +49,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.SET_NULL , null=True, related_name='posts')
     body = models.TextField()
     tags = models.ManyToManyField('Tag')
-    text_file = models.FileField(upload_to='files/', null=True, blank=True)
+    text_file = models.FileField(upload_to='files/',   storage=RawMediaCloudinaryStorage(), null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     # uuiu - it's uniwersally unique identifier(uuid)
     id = models.CharField(max_length=100, default=uuid.uuid4, unique=True,
