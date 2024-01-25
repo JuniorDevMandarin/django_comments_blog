@@ -8,6 +8,8 @@ from bs4 import BeautifulSoup
 import requests
 from django.contrib import messages 
 from django.core.paginator import Paginator
+from a_features.views import feature_enabled
+
 
 def home_view(request, tag=None):
     title = 'Test Blog Comments'
@@ -28,13 +30,18 @@ def home_view(request, tag=None):
     #         print("_____________", i.image)
     #     else: 
     #         print('ssssssssssss', i.photo_field)
-
+    try:
+        feature_herobutton = feature_enabled(1, 'Vitalii')
+    except:
+        feature_herobutton = False
+    
     
     context = {
         'posts' : posts,
         'title': title,
         'tag': tag,
-        'page':page
+        'page':page,
+        'feature_herobutton': feature_herobutton
     }
     if request.htmx:
         return render(request, 'snippets/loop_home_posts.html', context)
